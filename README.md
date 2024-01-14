@@ -2,7 +2,7 @@
 > Desafio DIO - Criando um Jogo da memória com Emojis Utilizando Javascript
 
 ## 📋 Índice
-- [Link do projeto:](https://finandolopes.github.io/Jogo-Da-Memoria/)
+- [Link do projeto:](https://finandolopes.github.io/Jogo_Da_Memoria/)
 
 - [📖 Sobre](#-Sobre)
 ## 📖 Sobre
