@@ -1,11 +1,23 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
   <meta charset="UTF-8">
-  <title>Jogo da memória</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JOGO DA MEMÓRIA</title>
+  <link rel="stylesheet" href="./src/styles/reset.css">
+  <link rel="stylesheet" href="./src/styles/main.css">
 </head>
+
 <body>
-  <canvas id="canvas" width="400" height="400"></canvas>
-  <script src="main.js"></script>
+
+  <div class="container">
+    <h2>JOGO DA MEMÓRIA</h2>
+    <div class="game"></div>
+    <button class="reset" onclick="window.location.reload()">REINICIAR JOGO</button>
+  </div>
+
+  <script defer src="./src/scripts/engine.js"></script>
 </body>
+
 </html>
