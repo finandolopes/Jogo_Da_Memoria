@@ -25,53 +25,23 @@ function desenhar() {
   }
 }
 
-function gerarCartas() {
-  const imagens = ["cachorro", "gato", "urso", "leão", "girafa", "elefante"];
-  for (let i = 0; i < 12; i++) {
-    const carta = {
-      imagem: `img/cards/${imagens[i]}.png`,
-      x: Math.floor(Math.random() * canvas.width),
-      y: Math.floor(Math.random() * canvas.height),
-    };
-    cartas.push(carta);
-  }
+// Carrega as imagens
+const imagens = [
+  "cachorro.png",
+  "gato.png",
+  "urso.png",
+  "leão.png",
+  "girafa.png",
+  "elefante.png",
+];
+
+for (const imagem of imagens) {
+  const carta = {
+    imagem: `${imagem}`,
+    x: Math.floor(Math.random() * canvas.width),
+    y: Math.floor(Math.random() * canvas.height),
+  };
+  cartas.push(carta);
 }
 
-function virarCarta(carta) {
-  carta.virada = true;
-  desenhar();
-}
-
-function clicar(event) {
-  const carta = event.target;
-  if (!carta.virada) {
-    virarCarta(carta);
-
-    // Verifica se o par foi encontrado
-    for (const outraCarta of cartas) {
-      if (carta.imagem === outraCarta.imagem && outraCarta.virada) {
-        pontos++;
-        outraCarta.virada = false;
-        carta.virada = false;
-
-        // Se todos os pares foram encontrados, o jogo termina
-        if (pontos === 6) {
-          alert("Parabéns! Você venceu!");
-          maioresPontuacoes.push(pontos);
-          desenhar();
-        }
-      }
-    }
-  }
-}
-
-// Eventos
-window.addEventListener("keydown", (event) => {
-  if (event.keyCode === 32) {
-    virarCarta(event.target);
-  }
-});
-canvas.addEventListener("click", clicar);
-
-// Gerar as cartas
-gerarCartas();
+// ...
